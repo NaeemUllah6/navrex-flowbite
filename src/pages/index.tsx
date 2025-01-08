@@ -300,7 +300,7 @@ const PatientsSurvey: FC = function () {
                 <Table.Body className="bg-white dark:bg-gray-800">
                   <Table.Row>
                     <Table.Cell className="whitespace-nowrap p-4 text-[16px] font-[500] text-[#111928] dark:text-white">
-                      <span className="font-semibold">patient sample 1</span>
+                      <span className="font-semibold">Patient Sample1</span>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap p-4 text-[14px] text-[#6B7280] dark:text-gray-400">
                       23 Nov 2022
@@ -319,7 +319,7 @@ const PatientsSurvey: FC = function () {
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell className="whitespace-nowrap p-4 text-[16px] font-[500] text-[#111928] dark:text-white">
-                      <span className="font-semibold">patient sample 2</span>
+                      <span className="font-semibold">Patient Sample2</span>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap p-4 text-[14px] text-[#6B7280] dark:text-gray-400">
                       23 Nov 2022
@@ -338,7 +338,7 @@ const PatientsSurvey: FC = function () {
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell className="whitespace-nowrap p-4 text-[16px] font-[500] text-[#111928] dark:text-white">
-                      <span className="font-semibold">patient sample 3</span>
+                      <span className="font-semibold">Patient Sample3</span>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap p-4 text-[14px] text-[#6B7280] dark:text-gray-400">
                       23 Nov 2022
@@ -357,7 +357,7 @@ const PatientsSurvey: FC = function () {
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell className="whitespace-nowrap p-4 text-[16px] font-[500] text-[#111928] dark:text-white">
-                      <span className="font-semibold">patient sample 4</span>
+                      <span className="font-semibold">Patient Sample4</span>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap p-4 text-[14px] text-[#6B7280] dark:text-gray-400">
                       23 Nov 2022
@@ -376,7 +376,7 @@ const PatientsSurvey: FC = function () {
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell className="whitespace-nowrap p-4 text-[16px] font-[500] text-[#111928] dark:text-white">
-                      <span className="font-semibold">patient sample 5</span>
+                      <span className="font-semibold">Patient Sample5</span>
                     </Table.Cell>
                     <Table.Cell className="whitespace-nowrap p-4 text-[14px] text-[#6B7280] dark:text-gray-400">
                       23 Nov 2022
