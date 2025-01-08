@@ -1,0 +1,24 @@
+.custom-sidevar > div{
+    padding: 0;
+}
+.whitespace-normal span{
+    white-space: normal;
+}
+
+@media(max-width: 1023px){
+    .sidebar-wraper .whitespace-normal span{
+        display: none;
+    }
+    .sidebar-wraper nav{
+        width: 46px;
+        z-index: 999;
+        padding-top: 22px;
+    }
+    .content-wraper {
+        padding-left: 42px;
+    }
+    .small-logo{
+        display: block !important;
+    }
+
+}
