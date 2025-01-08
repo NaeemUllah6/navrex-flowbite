@@ -28,7 +28,7 @@ const tableColumns = [
     header: "Status",
     render: (value: string) => (
       <span
-        className={`inline-block px-[10px] py-1 rounded text-xs font-medium ${
+        className={`inline-block rounded px-[10px] py-1 text-xs font-medium ${
           value === "Complete"
             ? "bg-orange-100 text-[#946C3D]"
             : "bg-green-100 text-green-600"
@@ -46,7 +46,7 @@ const tableColumns = [
       <img
         src={Dots}
         alt="Options"
-        className="w-5 h-5 cursor-pointer"
+        className="h-5 w-5 cursor-pointer"
         title=""
       />
     ),
@@ -56,7 +56,7 @@ const tableColumns = [
 const tableData = [
   {
     patientName: [{ img: PDF }, { name: "Survey#2341" }],
-    initials: "Joseph McFall",
+    initials: "Patient Sample 1",
     dateOfBirth: "20 Nov 2022",
     age: "Pedriatic",
     gender: "Male",
@@ -68,7 +68,7 @@ const tableData = [
   },
   {
     patientName: [{ img: PDF }, { name: "Survey#2341" }],
-    initials: "Micheal Gough",
+    initials: "Patient Sample 2",
     dateOfBirth: "20 Nov 2022",
     age: "Pedriatic",
     gender: "Female",
@@ -80,7 +80,7 @@ const tableData = [
   },
   {
     patientName: [{ img: PDF }, { name: "Survey#2341" }],
-    initials: "Joseph McFall",
+    initials: "Patient Sample 3",
     dateOfBirth: "20 Nov 2022",
     age: "Adult",
     gender: "Female",
@@ -92,7 +92,7 @@ const tableData = [
   },
   {
     patientName: [{ img: PDF }, { name: "Survey#2341" }],
-    initials: "Leslie Livingston",
+    initials: "Patient Sample 4",
     dateOfBirth: "18 Nov 2022",
     age: "Pedriatic",
     gender: "Male",
@@ -104,7 +104,7 @@ const tableData = [
   },
   {
     patientName: [{ img: PDF }, { name: "Survey#2341" }],
-    initials: "Jese Leos",
+    initials: "Patient Sample 5",
     dateOfBirth: "17 Nov 2022",
     age: "Adult",
     gender: "Male",
@@ -117,7 +117,7 @@ const tableData = [
   {
     patientName: [{ img: PDF }, { name: "Survey#2341" }],
     color: "Bonnie Green",
-    initials: "Lana Byrd",
+    initials: "Patient Sample 6",
     dateOfBirth: "18 Nov 2022",
     age: "Pedriatic",
     gender: "Female",

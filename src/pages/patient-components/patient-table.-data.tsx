@@ -27,7 +27,7 @@ const tableColumns = [
     header: "Classification",
     render: (value: string) => (
       <span
-        className={`inline-block px-[10px] py-1 rounded text-xs font-medium ${
+        className={`inline-block rounded px-[10px] py-1 text-xs font-medium ${
           value === "Pediatric"
             ? "bg-orange-100 text-[#946C3D]"
             : "bg-green-100 text-green-600"
@@ -43,14 +43,14 @@ const tableColumns = [
     key: "activing",
     header: "Active",
     render: (value: boolean) => (
-      <label className="relative inline-flex items-center cursor-pointer">
+      <label className="relative inline-flex cursor-pointer items-center">
         <input
           type="checkbox"
-          className="sr-only peer rounded"
+          className="peer sr-only rounded"
           checked={value}
           onChange={() => {}}
         />
-        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 rounded-full peer dark:bg-gray-700 peer-checked:bg-[#DEA25C] after:content-[''] after:absolute after:top-[2.3px] after:left-1 after:bg-white after:border after:border-gray-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-[88%] peer-checked:after:border-white"></div>
+        <div className="peer h-6 w-11 rounded-full bg-gray-200 after:absolute after:left-1 after:top-[2.3px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[''] peer-checked:bg-[#DEA25C] peer-checked:after:translate-x-[88%] peer-checked:after:border-white peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:bg-gray-700"></div>
       </label>
     ),
   },
@@ -61,7 +61,7 @@ const tableColumns = [
       <img
         src={Dots}
         alt="Options"
-        className="w-5 h-5 cursor-pointer"
+        className="h-5 w-5 cursor-pointer"
         title=""
       />
     ),
@@ -70,7 +70,7 @@ const tableColumns = [
 
 const tableData = [
   {
-    patientName: "Jese Leos",
+    patientName: "Patient Sample 1",
     initials: "AB",
     dateOfBirth: "20 Nov 2022",
     age: 13,
@@ -82,7 +82,7 @@ const tableData = [
     disable: "disabled-column",
   },
   {
-    patientName: "Bonnie Green",
+    patientName: "Patient Sample 2",
     initials: "BC",
     dateOfBirth: "23 Nov 2022",
     age: 12,
@@ -94,7 +94,7 @@ const tableData = [
     disable: "disabled-column",
   },
   {
-    patientName: "Leslie Livingston",
+    patientName: "Patient Sample 3",
     initials: "CM",
     dateOfBirth: "19 Nov 2022",
     age: 36,
@@ -106,7 +106,7 @@ const tableData = [
     disable: "disabled-column",
   },
   {
-    patientName: "Michael Gough",
+    patientName: "Patient Sample 4",
     initials: "AK",
     dateOfBirth: "27 Nov 2022",
     age: 11,
@@ -118,7 +118,7 @@ const tableData = [
     disable: "disabled-column",
   },
   {
-    patientName: "Joseph McFall",
+    patientName: "Patient Sample 5",
     initials: "AK",
     dateOfBirth: "20 Nov 2022",
     age: 9,
@@ -130,7 +130,7 @@ const tableData = [
     disable: "disabled-column",
   },
   {
-    patientName: "Karen Nelson",
+    patientName: "Patient Sample 6",
     color: "blue",
     initials: "CM",
     dateOfBirth: "18 Nov 2022",
