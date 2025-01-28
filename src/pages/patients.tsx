@@ -19,7 +19,7 @@ import { FiPlus } from "react-icons/fi";
 const PatientsPage: FC = function () {
   const card_items = [
     {
-      total_patients: "Total Patients",
+      total_patients: "Pending",
       up_rate: "vs last 24h ",
       No_of_patients: "325",
       card_icon: Card_icon,
@@ -27,16 +27,16 @@ const PatientsPage: FC = function () {
       percent: "8.5%",
     },
     {
-      total_patients: "Total Patients",
-      up_rate: "vs last 24h ",
+      total_patients: "Pending",
+      up_rate: "7 Days ",
       No_of_patients: "25",
       card_icon: card2,
       Up_icon: up_icon,
       percent: "8.8%",
     },
     {
-      total_patients: "Total Patients",
-      up_rate: "vs last 24h ",
+      total_patients: "Pending",
+      up_rate: "+7 Days ",
       No_of_patients: "300",
       card_icon: card3,
       Up_icon: down_icon,
@@ -57,13 +57,13 @@ const PatientsPage: FC = function () {
             <div className="rounded-lg bg-[#D2E6DB] p-6" key={index}>
               <div className="flex items-end justify-between">
                 <div>
-                  <p className="text-[14px] font-[400] text-[#374151]">
+                  <button className="text-[14px] font-[400] text-[#374151]">
                     {item.total_patients}
-                  </p>
+                  </button>
                   <h2 className="text-[24px] font-[700] text-[#111928]">
                     {item.No_of_patients}
                   </h2>
-                  <span className="flex items-center gap-2 text-[14px] font-[600] text-[#0E9F6E]">
+                  <button className="flex items-center gap-2 text-[14px] font-[600] text-[#0E9F6E]">
                     <span>
                       <img src={item.Up_icon} alt="up-icon" />
                     </span>
@@ -71,10 +71,17 @@ const PatientsPage: FC = function () {
                     <span className="text-[16px] font-[400] text-[#6B7280]">
                       {item.up_rate}
                     </span>
-                  </span>
+                  </button>
                 </div>
                 <div>
-                  <img width="56px" height="56px" src={item.card_icon} alt="" />
+                  <button>
+                    <img
+                      width="56px"
+                      height="56px"
+                      src={item.card_icon}
+                      alt=""
+                    />
+                  </button>
                 </div>
               </div>
             </div>

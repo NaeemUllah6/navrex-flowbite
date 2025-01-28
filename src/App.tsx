@@ -23,8 +23,8 @@ const App: FC = function () {
     <BrowserRouter>
       <Routes>
         <Route element={<FlowbiteWrapper />}>
-          <Route path="/" element={<DashboardPage />} index />
-          <Route path="/patients" element={<PatientsPage />} />
+          {/* <Route path="/" element={<DashboardPage />} index /> */}
+          <Route path="/" element={<PatientsPage />} />
           <Route path="/dx-survey" element={<DXSurvey />} />
           <Route path="/testings" element={<TestingPage />} />
           <Route path="/qeeg" element={<QEEGPage />} />

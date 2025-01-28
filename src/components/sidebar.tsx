@@ -56,7 +56,7 @@ const ExampleSidebar: FC = function () {
             </div>
             <Sidebar.Items className="px-2">
               <Sidebar.ItemGroup>
-                <Sidebar.Item
+                {/* <Sidebar.Item
                   href="/"
                   icon={Dashboard}
                   className={`justify-start whitespace-normal text-[#E1EFFE] hover:bg-primary-base hover:text-white ${
@@ -66,17 +66,17 @@ const ExampleSidebar: FC = function () {
                   }`}
                 >
                   Dashboard
-                </Sidebar.Item>
+                </Sidebar.Item> */}
                 <Sidebar.Item
-                  href="/patients"
+                  href="/"
                   icon={Patients}
                   className={`justify-start whitespace-normal text-[#E1EFFE] hover:bg-primary-base hover:text-white ${
-                    "/patients" === currentPage
+                    "/" === currentPage
                       ? "bg-primary-base text-white hover:bg-primary-base hover:text-white"
                       : ""
                   }`}
                 >
-                  Patients
+                  Dashboard
                 </Sidebar.Item>
                 <Sidebar.Item
                   href="/dx-survey"

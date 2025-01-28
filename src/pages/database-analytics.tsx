@@ -14,7 +14,7 @@ const DataIntegrationPage: FC = function () {
       description: "Build and train AI models for prediction-inference.",
     },
     {
-      title: "Custom Report Generation",
+      title: "Digital Twin Brain (DTB)",
       description:
         "Select from a variety of dynamic reporting options to display findings.",
     },

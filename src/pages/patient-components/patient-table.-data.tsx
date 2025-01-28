@@ -1,5 +1,6 @@
 import { Checkbox } from "flowbite-react";
 import React from "react";
+import "../../index.css";
 import Dots from "../../../public/images/patients-images/dots-horizontal.svg";
 import DynamicDataTable from "./patient-table";
 
@@ -18,17 +19,17 @@ const tableColumns = [
     key: "patientName",
     header: "Patient Name",
   },
-  { key: "initials", header: "Initials" },
+  { key: "initials", header: "" },
   { key: "dateOfBirth", header: "Date of Birth" },
   { key: "age", header: "Age" },
   { key: "gender", header: "Gender" },
   {
     key: "classification",
-    header: "Classification",
+    header: "Status",
     render: (value: string) => (
       <span
         className={`inline-block rounded px-[10px] py-1 text-xs font-medium ${
-          value === "Pediatric"
+          value === "Pending"
             ? "bg-orange-100 text-[#946C3D]"
             : "bg-green-100 text-green-600"
         }`}
@@ -38,7 +39,7 @@ const tableColumns = [
     ),
   },
   { key: "createdBy", header: "Created By" },
-  { key: "createdOn", header: "Created On" },
+  { key: "createdOn", header: "Schedule Appointment" },
   {
     key: "activing",
     header: "Active",
@@ -71,11 +72,11 @@ const tableColumns = [
 const tableData = [
   {
     patientName: "Patient Sample 1",
-    initials: "AB",
+
     dateOfBirth: "20 Nov 2022",
     age: 13,
     gender: "Male",
-    classification: "Pediatric",
+    classification: "Pending",
     createdBy: "20 Nov 2022",
     createdOn: "20 Nov 2022",
     active: false,
@@ -83,11 +84,11 @@ const tableData = [
   },
   {
     patientName: "Patient Sample 2",
-    initials: "BC",
+
     dateOfBirth: "23 Nov 2022",
     age: 12,
     gender: "Female",
-    classification: "Pediatric",
+    classification: "Pending",
     createdBy: "23 Nov 2022",
     createdOn: "23 Nov 2022",
     active: true,
@@ -95,11 +96,11 @@ const tableData = [
   },
   {
     patientName: "Patient Sample 3",
-    initials: "CM",
+
     dateOfBirth: "19 Nov 2022",
     age: 36,
     gender: "Female",
-    classification: "Adult",
+    classification: "ompleted",
     createdBy: "19 Nov 2022",
     createdOn: "19 Nov 2022",
     active: false,
@@ -107,11 +108,11 @@ const tableData = [
   },
   {
     patientName: "Patient Sample 4",
-    initials: "AK",
+
     dateOfBirth: "27 Nov 2022",
     age: 11,
     gender: "Male",
-    classification: "Adult",
+    classification: "ompleted",
     createdBy: "27 Nov 2022",
     createdOn: "27 Nov 2022",
     active: true,
@@ -119,11 +120,11 @@ const tableData = [
   },
   {
     patientName: "Patient Sample 5",
-    initials: "AK",
+
     dateOfBirth: "20 Nov 2022",
     age: 9,
     gender: "Male",
-    classification: "Pediatric",
+    classification: "Pending",
     createdBy: "20 Nov 2022",
     createdOn: "20 Nov 2022",
     active: false,
@@ -132,11 +133,11 @@ const tableData = [
   {
     patientName: "Patient Sample 6",
     color: "blue",
-    initials: "CM",
+
     dateOfBirth: "18 Nov 2022",
     age: 33,
     gender: "Female",
-    classification: "Adult",
+    classification: "ompleted",
     createdBy: "18 Nov 2022",
     createdOn: "18 Nov 2022",
     active: false,
