@@ -78,7 +78,7 @@ const ExampleSidebar: FC = function () {
                 >
                   Dashboard
                 </Sidebar.Item>
-                <Sidebar.Item
+                {/* <Sidebar.Item
                   href="/dx-survey"
                   icon={DXSurvey}
                   className={`justify-start whitespace-normal text-[#E1EFFE] hover:bg-primary-base hover:text-white ${
@@ -88,7 +88,7 @@ const ExampleSidebar: FC = function () {
                   }`}
                 >
                   Dx Survey
-                </Sidebar.Item>
+                </Sidebar.Item> */}
                 <Sidebar.Item
                   href="/testings"
                   icon={Testing}
