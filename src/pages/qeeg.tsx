@@ -27,13 +27,15 @@ const QEEGPage: FC = function () {
         <div className="mt-2 grid grid-cols-1 gap-4  pe-4 ps-4 pt-4 md:grid-cols-2 lg:grid-cols-3 ">
           {card_items.map((item, index) => (
             <div className="rounded-lg bg-[#D2E6DB] p-6" key={index}>
-              <div className="flex flex-col items-start gap-[20px]">
-                <p className="text-[20px] font-[600] text-[#19213D]">
-                  {item.title}
-                </p>
-                <h2 className="text-[14px] font-[400] text-[#374151]">
-                  {item.description}
-                </h2>
+              <div className="flex h-full flex-col items-start justify-between gap-[20px]">
+                <div>
+                  <p className="text-[20px] font-[600] text-[#19213D]">
+                    {item.title}
+                  </p>
+                  <h2 className="mt-4 text-[14px] font-[400] text-[#374151]">
+                    {item.description}
+                  </h2>
+                </div>
                 <span className="text-[16px] font-[600] text-[#DEA25C]">
                   Learn more
                 </span>
