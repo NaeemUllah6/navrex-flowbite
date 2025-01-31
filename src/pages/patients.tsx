@@ -178,7 +178,7 @@ const PatientsPage: FC = function () {
                                             className="text-[14px] font-[500] text-[#111928]"
                                             htmlFor="namefirst"
                                           >
-                                            First Name
+                                            Last Name
                                           </label>
                                           <input
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
@@ -192,7 +192,7 @@ const PatientsPage: FC = function () {
                                             className="text-[14px] font-[500] text-[#111928]"
                                             htmlFor="namefirst"
                                           >
-                                            Age
+                                            DOB
                                           </label>
                                           <input
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
@@ -224,17 +224,14 @@ const PatientsPage: FC = function () {
                                             className="text-[14px] font-[500] text-[#111928]"
                                             htmlFor="namefirst"
                                           >
-                                            Classification
+                                            Questionnaire
                                           </label>
                                           <select className="rounded-[8px] border  border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3 text-[#6B7280] placeholder:text-[#6B7280]">
-                                            <option value="">
-                                              Select Gender
-                                            </option>
-                                            <option value="male">Male</option>
+                                            <option value="">Pedriatic</option>
+                                            <option value="male">Adult</option>
                                             <option value="female">
-                                              Female
+                                              Geneatric
                                             </option>
-                                            <option value="other">Other</option>
                                           </select>
                                         </div>
                                       </div>
@@ -244,13 +241,29 @@ const PatientsPage: FC = function () {
                                             className="text-[14px] font-[500] text-[#111928]"
                                             htmlFor="namefirst"
                                           >
-                                            Initials
+                                            Email
                                           </label>
                                           <input
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
                                             id="namefirst"
-                                            type="text"
-                                            placeholder="Enter"
+                                            type="email"
+                                            placeholder="Enter Email"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="mt-[20px] grid grid-cols-1">
+                                        <div className="flex flex-col gap-2">
+                                          <label
+                                            className="text-[14px] font-[500] text-[#111928]"
+                                            htmlFor="phone"
+                                          >
+                                            Phone
+                                          </label>
+                                          <input
+                                            className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
+                                            id="phone"
+                                            type="number"
+                                            placeholder="Enter Phone"
                                           />
                                         </div>
                                       </div>

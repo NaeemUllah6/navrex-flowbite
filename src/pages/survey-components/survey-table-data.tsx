@@ -126,6 +126,18 @@ const tableData = [
     createdOn: "18 Nov 2022",
     active: false,
   },
+  {
+    patientName: [{ img: PDF }, { name: "Survey#2341" }],
+    color: "Bonnie Green",
+    initials: "Patient Sample 6",
+    dateOfBirth: "18 Nov 2022",
+    age: "Pedriatic",
+    gender: "Female",
+    classification: "Pending",
+    createdBy: "18 Nov 2022",
+    createdOn: "18 Nov 2022",
+    active: false,
+  },
 ];
 
 const App: React.FC = () => {
