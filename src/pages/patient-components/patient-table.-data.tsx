@@ -1,4 +1,4 @@
-import { Checkbox,Select } from "flowbite-react";
+import { Checkbox } from "flowbite-react";
 import React from "react";
 import "../../index.css";
 import Dots from "../../../public/images/patients-images/dots-horizontal.svg";
@@ -104,18 +104,7 @@ const App: React.FC = () => {
     },
     {
       key: "New_Column",
-      header: (
-        <select
-          id="countries"
-          className="block w-fit cursor-pointer rounded-lg border-none bg-transparent py-4 text-sm font-medium text-gray-500 focus:ring-0"
-        >
-          <option selected>Questionnaire</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-        </select>
-      ),
+      header: "Questionare",
       render: (value: string) => (
         <div className="">
           <span>{value}</span>
@@ -124,18 +113,7 @@ const App: React.FC = () => {
     },
     {
       key: "New_Column",
-      header: (
-        <select
-          id="countries"
-          className="block w-fit cursor-pointer appearance-none rounded-lg border-none bg-transparent py-4 text-sm font-medium text-gray-500 focus:ring-0"
-        >
-          <option selected>Questionnaire</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-        </select>
-      ),
+      header: "",
       render: (value: string) => (
         <div className="">
           <span>{value}</span>
