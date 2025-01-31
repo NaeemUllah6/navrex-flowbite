@@ -1,4 +1,4 @@
-import { Checkbox } from "flowbite-react";
+import { Checkbox,Select } from "flowbite-react";
 import React from "react";
 import "../../index.css";
 import Dots from "../../../public/images/patients-images/dots-horizontal.svg";
@@ -82,7 +82,7 @@ const App: React.FC = () => {
       header: "",
       render: (_: any, rowIndex: number) => (
         <div className="dropdown-container relative">
-          <button onClick={(e) => handleOpen(rowIndex, e)}>
+          <button>
             <img
               src={Dots}
               alt="Options"
@@ -90,18 +90,55 @@ const App: React.FC = () => {
               title=""
             />
           </button>
-          {activeDropdown === rowIndex && (
-            <div className="absolute right-0 z-50 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="py-1">
-                <button className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  choose
-                </button>
-                <button className="block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  cancel
-                </button>
-              </div>
-            </div>
-          )}
+        </div>
+      ),
+    },
+    {
+      key: "New_Column",
+      header: <button onClick={(e) => handleOpen(rowIndex, e)}>Report</button>,
+      render: (value: string) => (
+        <div className="">
+          <span>{value}</span>
+        </div>
+      ),
+    },
+    {
+      key: "New_Column",
+      header: (
+        <select
+          id="countries"
+          className="block w-fit cursor-pointer rounded-lg border-none bg-transparent py-4 text-sm font-medium text-gray-500 focus:ring-0"
+        >
+          <option selected>Questionnaire</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      ),
+      render: (value: string) => (
+        <div className="">
+          <span>{value}</span>
+        </div>
+      ),
+    },
+    {
+      key: "New_Column",
+      header: (
+        <select
+          id="countries"
+          className="block w-fit cursor-pointer appearance-none rounded-lg border-none bg-transparent py-4 text-sm font-medium text-gray-500 focus:ring-0"
+        >
+          <option selected>Questionnaire</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      ),
+      render: (value: string) => (
+        <div className="">
+          <span>{value}</span>
         </div>
       ),
     },

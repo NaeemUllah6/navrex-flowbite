@@ -167,6 +167,7 @@ const PatientsPage: FC = function () {
                                             First Name
                                           </label>
                                           <input
+                                            required
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
                                             id="namefirst"
                                             type="text"
@@ -181,6 +182,7 @@ const PatientsPage: FC = function () {
                                             Last Name
                                           </label>
                                           <input
+                                            required
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
                                             id="namefirst"
                                             type="text"
@@ -195,6 +197,7 @@ const PatientsPage: FC = function () {
                                             DOB
                                           </label>
                                           <input
+                                            required
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
                                             id="namefirst"
                                             type="text"
@@ -244,6 +247,7 @@ const PatientsPage: FC = function () {
                                             Email
                                           </label>
                                           <input
+                                            required
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
                                             id="namefirst"
                                             type="email"
@@ -260,6 +264,7 @@ const PatientsPage: FC = function () {
                                             Phone
                                           </label>
                                           <input
+                                            required
                                             className="rounded-[8px] border border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3"
                                             id="phone"
                                             type="number"
@@ -268,6 +273,12 @@ const PatientsPage: FC = function () {
                                         </div>
                                       </div>
                                       <div className="mt-8 flex items-center justify-end gap-3">
+                                        <button
+                                          type="button"
+                                          className="w-full rounded-lg border px-[30px] py-[10px] text-[14px] font-[600]"
+                                        >
+                                          Send Questionnaire
+                                        </button>
                                         <button
                                           type="button"
                                           onClick={toggleModal}
