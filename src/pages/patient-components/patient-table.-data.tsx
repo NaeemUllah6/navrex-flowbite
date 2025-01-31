@@ -114,7 +114,7 @@ const App: React.FC = () => {
             <select className="selectCustom w-fit appearance-none focus:border-0 focus:outline-none focus:ring-0">
               <option value="">Adult</option>
               <option value="">Padiatric</option>
-              <option value="">Geneatricn</option>
+              <option value="">Geneatric</option>
             </select>
           </div>
         ),
