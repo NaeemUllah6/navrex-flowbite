@@ -24,7 +24,7 @@ const PatientsPage: FC = function () {
       No_of_patients: "325",
       card_icon: Card_icon,
       Up_icon: up_icon,
-      percent: "8.5%",
+      // percent: "8.5%",
     },
     {
       total_patients: "Pending",
@@ -32,7 +32,7 @@ const PatientsPage: FC = function () {
       No_of_patients: "25",
       card_icon: card2,
       Up_icon: up_icon,
-      percent: "8.8%",
+      // percent: "8.8%",
     },
     {
       total_patients: "Pending",
@@ -40,7 +40,7 @@ const PatientsPage: FC = function () {
       No_of_patients: "300",
       card_icon: card3,
       Up_icon: down_icon,
-      percent: "2.5%",
+      // percent: "2.5%",
     },
   ];
   const [isOpen, setIsOpen] = useState(false);
@@ -63,9 +63,9 @@ const PatientsPage: FC = function () {
                   <h2 className="text-[24px] font-[700] text-[#111928]">
                     {item.No_of_patients}
                   </h2>
-                  <button className="flex items-center gap-2 text-[14px] font-[600] text-[#0E9F6E]">
+                  <button className=" text-[14px] font-[600] text-[#0E9F6E]">
                     <span>
-                      <img src={item.Up_icon} alt="up-icon" />
+                      {/* <img src={item.Up_icon} alt="up-icon" /> */}
                     </span>
                     <span>{item.percent}</span>
                     <span className="text-[16px] font-[400] text-[#6B7280]">
@@ -101,7 +101,7 @@ const PatientsPage: FC = function () {
                         <Myinput
                           className="h-[37px] rounded-[8px] border border-[#D1D5DB] ps-[16px] font-[400] placeholder:text-[14px]"
                           input_type="text"
-                          input_placeholder="Search for Products"
+                          input_placeholder="Search for Patients"
                         />
                       </div>
                       <div className="flex items-center gap-2">
