@@ -1,46 +1,25 @@
 import { Checkbox } from "flowbite-react";
-import React from "react";
+import React, { useEffect } from "react";
 import "../../index.css";
 import Dots from "../../../public/images/patients-images/dots-horizontal.svg";
 import DynamicDataTable from "./patient-table";
-import { useEffect } from "react";
 
 const App: React.FC = () => {
-  const [activeDropdown, setActiveDropdown] = React.useState<number | null>(
-    null
-  );
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (!target.closest(".dropdown-container")) {
-        setActiveDropdown(null);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleOpen = (index: number, event: React.MouseEvent) => {
-    event.stopPropagation();
-    setActiveDropdown(activeDropdown === index ? null : index);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(!open);
   };
   const tableColumns = [
     {
-      key: "New_Column",
+      key: "checkbox",
       header: <Checkbox />,
-      render: (value: string) => (
-        <div className="">
+      render: () => (
+        <div>
           <Checkbox />
-          <span>{value}</span>
         </div>
       ),
     },
-    {
-      key: "patientName",
-      header: "Patient Name",
-    },
+    { key: "patientName", header: "Patient Name" },
     { key: "initials", header: "" },
     { key: "dateOfBirth", header: "Date of Birth" },
     { key: "age", header: "Age" },
@@ -63,7 +42,7 @@ const App: React.FC = () => {
     { key: "createdBy", header: "Created On" },
     { key: "createdOn", header: "Scheduled Appointment" },
     {
-      key: "activing",
+      key: "active",
       header: "Active",
       render: (value: boolean) => (
         <label className="relative inline-flex cursor-pointer items-center">
@@ -94,31 +73,63 @@ const App: React.FC = () => {
       ),
     },
     {
-      key: "New_Column",
-      header: <button onClick={(e) => handleOpen(rowIndex, e)}>Report</button>,
-      render: (value: string) => (
-        <div className="">
-          <span>{value}</span>
-        </div>
-      ),
+      key: "report",
+      header: "Report",
+      render: (_: any, row: any) =>
+        row.reportButton === "Report" && (
+          <div>
+            <button className="rounded bg-[#DEA25C] px-3 py-1 text-white">
+              Link to Report
+            </button>
+          </div>
+        ),
     },
     {
-      key: "New_Column",
-      header: "Questionare",
-      render: (value: string) => (
-        <div className="">
-          <span>{value}</span>
-        </div>
-      ),
+      key: "report",
+      header: "Questionnaire",
+      render: (_: any, row: any) =>
+        row.reportButton === "Report" && (
+          // <div>
+          //   <button
+          //     className="rounded bg-[#DEA25C] px-3 py-1 text-white"
+          //     onClick={handleOpen}
+          //   >
+          //     Adult
+          //   </button>
+          //   <div className={`${open ? "block" : "hidden"} relative`}>
+          //     <ul className="absolute left-[30%] top-2 flex flex-col gap-3 rounded bg-white  shadow-md">
+          //       <li className="px-6 py-1 text-base  text-[#946C3D] hover:bg-[#DEA25C] hover:text-white">
+          //         <a href="#">Adult</a>
+          //       </li>
+          //       <li className="px-6 py-1 text-base text-[#946C3D] hover:bg-[#DEA25C] hover:text-white">
+          //         <a href="#">Padiatric</a>
+          //       </li>
+          //       <li className="px-6 py-1 text-base text-[#946C3D] hover:bg-[#DEA25C] hover:text-white">
+          //         <a href="#">Geneatric</a>
+          //       </li>
+          //     </ul>
+          //   </div>
+          // </div>
+          <div className="flex items-center justify-center">
+            <select className="selectCustom w-fit appearance-none focus:border-0 focus:outline-none focus:ring-0">
+              <option value="">Adult</option>
+              <option value="">Padiatric</option>
+              <option value="">Geneatricn</option>
+            </select>
+          </div>
+        ),
     },
     {
-      key: "New_Column",
+      key: "report",
       header: "",
-      render: (value: string) => (
-        <div className="">
-          <span>{value}</span>
-        </div>
-      ),
+      render: (_: any, row: any) =>
+        row.reportButton === "Report" && (
+          <div>
+            <button className="rounded bg-[#DEA25C] px-5 py-[5px] text-white">
+              Edit
+            </button>
+          </div>
+        ),
     },
   ];
 
@@ -133,6 +144,7 @@ const App: React.FC = () => {
       createdOn: "20 Nov 2022",
       active: false,
       disable: "disabled-column",
+      reportButton: "Report",
     },
     {
       patientName: "Patient Sample 2",
@@ -192,7 +204,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="">
+    <div>
       <DynamicDataTable columns={tableColumns} data={tableData} />
     </div>
   );

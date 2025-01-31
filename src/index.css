@@ -206,3 +206,17 @@
   width: 18px !important;
   height: 18px !important;
 }
+
+.selectCustom {
+  appearance: none !important;
+  background-color: #DEA25C;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background-image: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  padding-right: 10px !important;
+}
