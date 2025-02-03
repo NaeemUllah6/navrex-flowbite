@@ -78,7 +78,7 @@ const App: React.FC = () => {
       render: (_: any, row: any) =>
         row.reportButton === "Report" && (
           <div>
-            <button className="rounded bg-[#DEA25C] px-3 py-1 text-white">
+            <button className="tablebuttons rounded bg-[#DEA25C] px-3 py-1 font-medium text-white">
               Link to Report
             </button>
           </div>
@@ -111,10 +111,10 @@ const App: React.FC = () => {
           //   </div>
           // </div>
           <div className="flex items-center justify-center">
-            <select className="selectCustom w-fit appearance-none focus:border-0 focus:outline-none focus:ring-0">
+            <select className="selectCustom w-fit appearance-none  focus:border-0 focus:outline-none focus:ring-0">
               <option value="">Adult</option>
-              <option value="">Padiatric</option>
-              <option value="">Geneatric</option>
+              <option value="">Pediatric</option>
+              <option value="">Geriatric</option>
             </select>
           </div>
         ),
@@ -125,7 +125,7 @@ const App: React.FC = () => {
       render: (_: any, row: any) =>
         row.reportButton === "Report" && (
           <div>
-            <button className="rounded bg-[#DEA25C] px-5 py-[5px] text-white">
+            <button className="rounded bg-green-100 px-3 py-[5px] text-xs font-medium text-green-600">
               Edit
             </button>
           </div>

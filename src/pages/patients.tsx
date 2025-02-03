@@ -230,10 +230,10 @@ const PatientsPage: FC = function () {
                                             Questionnaire
                                           </label>
                                           <select className="rounded-[8px] border  border-[#D1D5DB] bg-[#F9FAFB] px-4 py-3 text-[#6B7280] placeholder:text-[#6B7280]">
-                                            <option value="">Pedriatic</option>
+                                            <option value="">Pediatric</option>
                                             <option value="male">Adult</option>
                                             <option value="female">
-                                              Geneatric
+                                              Geriatric
                                             </option>
                                           </select>
                                         </div>
